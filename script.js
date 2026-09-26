@@ -1,49 +1,83 @@
-// Toggle Menu
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+// Toggle Mobile Menu
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-};
+if (menuIcon && navbar) {
+    menuIcon.onclick = () => {
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+    };
+}
 
-// Scroll Sections Active Link
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+// Scroll Sections Active Link & Sticky Navbar
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header nav a');
+const header = document.querySelector('header');
 
 window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+    const scrollPos = window.scrollY;
 
-        if(top >= offset && top < offset + height) {
+    sections.forEach(sec => {
+        const top = sec.offsetTop - 180;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
+
+        if (scrollPos >= top && scrollPos < top + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
+            const activeLink = document.querySelector('header nav a[href*=' + id + ']');
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
         }
     });
 
-    // Sticky Navbar
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100);
+    // Sticky Header
+    if (header) {
+        header.classList.toggle('sticky', scrollPos > 80);
+    }
 
-    // Remove toggle icon and navbar when clicking a navbar link (scroll)
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
+    // Close mobile navbar on scroll
+    if (menuIcon && navbar) {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    }
 };
 
-// ScrollReveal Animation
-ScrollReveal({ 
-    reset: true,
-    distance: '80px',
-    duration: 2000,
-    delay: 200
-});
+// Typed.js Dynamic Typing Animation for Role Subtitles
+if (typeof Typed !== 'undefined') {
+    new Typed('.multiple-text', {
+        strings: [
+            'Full-Stack Developer',
+            'AI / ML Enthusiast',
+            'Prompt Engineer',
+            'Data Analyst',
+            'FastAPI & Next.js Architect'
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 1500,
+        loop: true
+    });
+}
 
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .skills-container, .projects-container, .contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+// ScrollReveal Animations
+if (typeof ScrollReveal !== 'undefined') {
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '50px',
+        duration: 1200,
+        delay: 150,
+        reset: false // Keep elements visible after scrolling down
+    });
+
+    sr.reveal('.badge-pill, .home-content h3, .home-content h1, .section-title', { origin: 'top' });
+    sr.reveal('.hero-desc, .social-media, .btn-group, .hero-stats', { origin: 'bottom', interval: 100 });
+    sr.reveal('.home-img', { origin: 'right', delay: 250 });
+    sr.reveal('.about-card, .expertise-card', { origin: 'bottom', interval: 120 });
+    sr.reveal('.skills-box', { origin: 'bottom', interval: 100 });
+    sr.reveal('.project-card', { origin: 'bottom', interval: 150 });
+    sr.reveal('.timeline-column', { origin: 'bottom', interval: 200 });
+    sr.reveal('.contact-info-panel, .contact-form', { origin: 'bottom', interval: 150 });
+}

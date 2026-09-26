@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Praveen Kushwaha - Full Stack Developer Portfolio">
-    <title>Praveen Kushwaha | Portfolio</title>
+    <meta name="description" content="Praveen Kushwaha - Full-Stack Developer, AI/ML Enthusiast, Prompt Engineer & Data Analyst Portfolio">
+    <title>Praveen Kushwaha | Full-Stack Developer & AI Specialist</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- Boxicons for Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Typed.js for smooth typing effect -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Background Animation Elements -->
+    <!-- Background Animated Glow Blobs -->
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
 
     <!-- Header / Navbar -->
     <header class="header">
-        <a href="#home" class="logo">Praveen<span>.</span></a>
+        <a href="#home" class="logo">Praveen<span>.dev</span></a>
         
         <i class='bx bx-menu' id="menu-icon"></i>
         
@@ -27,82 +32,287 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Home Section -->
+    <!-- Home / Hero Section -->
     <section class="home" id="home">
-        <div class="home-content reveal">
+        <div class="home-content">
+            <div class="badge-pill">
+                <span class="status-dot"></span> Available for Opportunities
+            </div>
             <h3>Hello, It's Me</h3>
             <h1>Praveen Kushwaha</h1>
-            <h3>And I'm a <span class="multiple-text">Data Analyst, Full-Stack Developer With AI Specialist</span></h3>
-            <p>I build modern, scalable web applications and uncover actionable insights through Data Analytics. Let's turn great ideas into amazing digital realities.</p>
+            <h3>I'm a <span class="multiple-text"></span></h3>
+            <p class="hero-desc">
+                Full-Stack Developer with hands-on experience building complete, production-deployed web ecosystems using <strong>React.js, Next.js, Node.js, and FastAPI</strong>. Skilled in <strong>Prompt Engineering and LLM integration (Google Gemini API)</strong> to create intelligent, high-impact products.
+            </p>
             
             <div class="social-media">
-                <a href="https://www.linkedin.com/in/praveen-kushwaha-159a1b3a5/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Praveen-3517" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://instagram.com/prave_3517" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://linkedin.com/in/praveen-kushwaha" target="_blank" title="LinkedIn Profile"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Praveen-3517" target="_blank" title="GitHub Profile"><i class='bx bxl-github'></i></a>
+                <a href="mailto:praveenmaurya3517@gmail.com" title="Email Me"><i class='bx bx-envelope'></i></a>
+                <a href="tel:+916386703517" title="Call Me"><i class='bx bx-phone-call'></i></a>
             </div>
             
-            <a href="#projects" class="btn">View My Work</a>
+            <div class="btn-group">
+                <a href="#projects" class="btn btn-primary">
+                    <i class='bx bx-code-block'></i> View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class='bx bx-paper-plane'></i> Let's Talk
+                </a>
+            </div>
+
+            <!-- Quick Metrics -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">7+</span>
+                    <span class="stat-label">AI Tools in Bittu AI</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1.8k+</span>
+                    <span class="stat-label">WASM DSA Problems</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Production Ready</span>
+                </div>
+            </div>
         </div>
         
-        <div class="home-img reveal">
-            <!-- Glassmorphism image wrapper -->
-            <div class="img-box">
-                <img src="profile.jpg" alt="Praveen Kushwaha">
+        <div class="home-img">
+            <div class="img-wrapper">
+                <div class="glow-ring"></div>
+                <div class="img-box">
+                    <img src="profile.jpg" alt="Praveen Kushwaha - Full Stack Developer">
+                </div>
+                <div class="floating-badge badge-top">
+                    <i class='bx bx-bot'></i>
+                    <div>
+                        <strong>LLM & AI</strong>
+                        <span>Gemini & Prompt Eng.</span>
+                    </div>
+                </div>
+                <div class="floating-badge badge-bottom">
+                    <i class='bx bx-layer'></i>
+                    <div>
+                        <strong>Full-Stack</strong>
+                        <span>Next.js • FastAPI • React</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="about-content reveal">
+        <div class="section-title">
+            <span class="subtitle">Get To Know More</span>
             <h2 class="heading">About <span>Me</span></h2>
-            <h3>Passionate Data Analyst, Full-Stack Developer With AI Specialist</h3>
-            <p>I specialize in building complete web ecosystems from the ground up and analyzing complex datasets. From responsive frontend designs and robust backend architectures to uncovering hidden patterns in data, I bridge the gap between aesthetics, functionality, and intelligence. My ultimate goal is to create data-driven products that solve real-world problems while delivering an exceptional user experience.</p>
+        </div>
+
+        <div class="about-container">
+            <div class="about-card intro-card">
+                <div class="about-header">
+                    <i class='bx bx-terminal terminal-icon'></i>
+                    <h3>Full-Stack Developer, AI Integrator & Data Analyst</h3>
+                </div>
+                <p>
+                    I specialize in designing and engineering end-to-end scalable web applications and intelligent AI-driven systems. With a strong foundation in both frontend aesthetics and robust backend architecture, I transform complex requirements into seamless, production-ready digital products.
+                </p>
+                <p>
+                    My expertise spans from building AI media platforms with <strong>Google Gemini API, Edge-TTS, FFT signal processing, and Monaco WASM engines</strong>, to real-time client portals with <strong>Socket.io and WhatsApp Cloud API</strong>, and robust school ERP architectures with <strong>Next.js 16 App Router & JWT RBAC</strong>.
+                </p>
+
+                <div class="about-info-grid">
+                    <div class="info-box">
+                        <i class='bx bx-envelope'></i>
+                        <div>
+                            <span>Email</span>
+                            <strong>praveenmaurya3517@gmail.com</strong>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <i class='bx bx-phone'></i>
+                        <div>
+                            <span>Phone</span>
+                            <strong>(+91) 6386703517</strong>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <i class='bx bxl-github'></i>
+                        <div>
+                            <span>GitHub</span>
+                            <strong>github.com/Praveen-3517</strong>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <i class='bx bxl-linkedin-square'></i>
+                        <div>
+                            <span>LinkedIn</span>
+                            <strong>praveen-kushwaha</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pillars of Expertise -->
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="exp-icon"><i class='bx bx-brain'></i></div>
+                    <h4>Generative AI & LLMs</h4>
+                    <p>Prompt engineering, Google Gemini API integration, multimodal pipelines (Text-to-Video, audio synthesis with Edge-TTS), and Pyodide WASM.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="exp-icon"><i class='bx bx-code-alt'></i></div>
+                    <h4>Modern Full-Stack</h4>
+                    <p>High-performance web ecosystems with React.js, Next.js (App Router), FastAPI, Node.js/Express, Tailwind CSS, and REST API design.</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="exp-icon"><i class='bx bx-bar-chart-alt-2'></i></div>
+                    <h4>Data Analytics & Algorithms</h4>
+                    <p>FFT signal analysis, perceptual hashing, K-Means clustering, statistical analysis, and Python data tools (SciPy, OpenCV, Excel).</p>
+                </div>
+                <div class="expertise-card">
+                    <div class="exp-icon"><i class='bx bx-shield-quarter'></i></div>
+                    <h4>Auth, Security & DevOps</h4>
+                    <p>JWT Role-Based Access Control (RBAC), Edge Middleware protection, HMAC-SHA256 payment verification, Vercel & Render CI/CD deployments.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="section-title">
+            <span class="subtitle">My Technical Arsenal</span>
+            <h2 class="heading">Technical <span>Skills</span></h2>
+        </div>
         
         <div class="skills-container">
-            <div class="skills-box reveal">
-                <i class='bx bx-code-alt'></i>
-                <h3>Frontend</h3>
+            <!-- Web Development -->
+            <div class="skills-box">
+                <div class="skill-category-header">
+                    <i class='bx bx-code-block category-icon'></i>
+                    <div>
+                        <h3>Web Development</h3>
+                        <span>Modern Frontend & Backend</span>
+                    </div>
+                </div>
                 <div class="skill-tags">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                    <span>React.js</span>
-                    <span>Next.js</span>
-                    <span>Tailwind</span>
+                    <span class="tag"><i class='bx bxl-react'></i> React.js</span>
+                    <span class="tag"><i class='bx bxl-react'></i> Next.js (App Router)</span>
+                    <span class="tag"><i class='bx bxl-nodejs'></i> Node.js</span>
+                    <span class="tag"><i class='bx bx-server'></i> Express.js</span>
+                    <span class="tag highlight-tag"><i class='bx bx-bolt-circle'></i> FastAPI</span>
+                    <span class="tag"><i class='bx bx-transfer'></i> REST APIs</span>
+                    <span class="tag"><i class='bx bx-broadcast'></i> Socket.io</span>
+                    <span class="tag"><i class='bx bxl-tailwind-css'></i> Tailwind CSS</span>
+                    <span class="tag"><i class='bx bx-cube'></i> Vite</span>
+                    <span class="tag"><i class='bx bxl-html5'></i> HTML5 & CSS3</span>
                 </div>
             </div>
 
-            <div class="skills-box reveal">
-                <i class='bx bx-server'></i>
-                <h3>Backend</h3>
+            <!-- AI & Machine Learning -->
+            <div class="skills-box">
+                <div class="skill-category-header">
+                    <i class='bx bx-chip category-icon'></i>
+                    <div>
+                        <h3>AI & Machine Learning</h3>
+                        <span>LLMs, Vision & Signal Processing</span>
+                    </div>
+                </div>
                 <div class="skill-tags">
-                    <span>Node.js</span>
-                    <span>Express.js</span>
-                    <span>MongoDB</span>
-                    <span>REST APIs</span>
+                    <span class="tag highlight-tag"><i class='bx bx-bot'></i> Google Gemini API</span>
+                    <span class="tag highlight-tag"><i class='bx bx-message-square-dots'></i> Prompt Engineering</span>
+                    <span class="tag"><i class='bx bx-network-chart'></i> LLM Integration</span>
+                    <span class="tag"><i class='bx bx-camera'></i> OpenCV</span>
+                    <span class="tag"><i class='bx bx-line-chart'></i> SciPy</span>
+                    <span class="tag"><i class='bx bx-pulse'></i> FFT Signal Processing</span>
+                    <span class="tag"><i class='bx bx-scatter-chart'></i> K-Means Clustering</span>
+                    <span class="tag"><i class='bx bx-volume-full'></i> Edge-TTS Voices</span>
                 </div>
             </div>
 
-            <div class="skills-box reveal">
-                <i class='bx bx-wrench'></i>
-                <h3>Tools & Data</h3>
+            <!-- Programming Languages -->
+            <div class="skills-box">
+                <div class="skill-category-header">
+                    <i class='bx bx-terminal category-icon'></i>
+                    <div>
+                        <h3>Programming Languages</h3>
+                        <span>Core & Scripting Languages</span>
+                    </div>
+                </div>
                 <div class="skill-tags">
-                    <span>Python</span>
-                    <span>Pandas</span>
-                    <span>SQL</span>
-                    <span>Git & GitHub</span>
-                    <span>VS Code</span>
+                    <span class="tag highlight-tag"><i class='bx bxl-python'></i> Python</span>
+                    <span class="tag"><i class='bx bxl-javascript'></i> JavaScript (ES6+)</span>
+                    <span class="tag"><i class='bx bxl-typescript'></i> TypeScript</span>
+                    <span class="tag"><i class='bx bxl-c-plus-plus'></i> C / C++</span>
+                    <span class="tag"><i class='bx bxl-html5'></i> HTML5</span>
+                    <span class="tag"><i class='bx bxl-css3'></i> CSS3</span>
+                </div>
+            </div>
+
+            <!-- Databases & Data Tools -->
+            <div class="skills-box">
+                <div class="skill-category-header">
+                    <i class='bx bx-data category-icon'></i>
+                    <div>
+                        <h3>Databases & Data Analytics</h3>
+                        <span>Storage, ORMs & Data Science</span>
+                    </div>
+                </div>
+                <div class="skill-tags">
+                    <span class="tag"><i class='bx bx-data'></i> SQLite</span>
+                    <span class="tag"><i class='bx bx-layer'></i> Prisma ORM</span>
+                    <span class="tag"><i class='bx bx-spreadsheet'></i> MS Excel</span>
+                    <span class="tag"><i class='bx bx-pie-chart-alt-2'></i> Data Visualization</span>
+                    <span class="tag"><i class='bx bx-stats'></i> Statistical Analysis</span>
+                    <span class="tag learning-tag"><i class='bx bx-loader-circle'></i> MongoDB (Learning)</span>
+                    <span class="tag learning-tag"><i class='bx bx-loader-circle'></i> SQL (Learning)</span>
+                </div>
+            </div>
+
+            <!-- Tools & Platforms -->
+            <div class="skills-box">
+                <div class="skill-category-header">
+                    <i class='bx bx-wrench category-icon'></i>
+                    <div>
+                        <h3>Tools & Cloud Platforms</h3>
+                        <span>DevOps, Testing & Editors</span>
+                    </div>
+                </div>
+                <div class="skill-tags">
+                    <span class="tag"><i class='bx bxl-git'></i> Git & GitHub</span>
+                    <span class="tag"><i class='bx bxl-visual-studio'></i> VS Code</span>
+                    <span class="tag"><i class='bx bx-cloud'></i> Vercel</span>
+                    <span class="tag"><i class='bx bx-server'></i> Render</span>
+                    <span class="tag"><i class='bx bx-send'></i> Postman</span>
+                    <span class="tag"><i class='bx bx-video'></i> FFmpeg</span>
+                    <span class="tag"><i class='bx bx-code'></i> Monaco Editor</span>
+                    <span class="tag"><i class='bx bx-terminal'></i> Pyodide WASM</span>
+                </div>
+            </div>
+
+            <!-- Core Concepts & Methodologies -->
+            <div class="skills-box">
+                <div class="skill-category-header">
+                    <i class='bx bx-bulb category-icon'></i>
+                    <div>
+                        <h3>Core Concepts & Practices</h3>
+                        <span>Architecture & Paradigms</span>
+                    </div>
+                </div>
+                <div class="skill-tags">
+                    <span class="tag highlight-tag"><i class='bx bx-cube-alt'></i> OOP (Object-Oriented)</span>
+                    <span class="tag"><i class='bx bx-sitemap'></i> REST API Architecture</span>
+                    <span class="tag highlight-tag"><i class='bx bx-sparkles'></i> Generative AI</span>
+                    <span class="tag highlight-tag"><i class='bx bx-code-curly'></i> AI-Assisted Dev (Vibe Coding)</span>
+                    <span class="tag"><i class='bx bx-lock-alt'></i> JWT & RBAC Auth</span>
+                    <span class="tag"><i class='bx bx-credit-card'></i> HMAC-SHA256 Payment Security</span>
                 </div>
             </div>
         </div>
@@ -110,53 +320,278 @@
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
-        <h2 class="heading">Featured <span>Projects</span></h2>
+        <div class="section-title">
+            <span class="subtitle">Real-World Deployments & Products</span>
+            <h2 class="heading">Featured <span>Projects</span></h2>
+        </div>
         
-        <div class="projects-container">
-            <!-- KaamFinder Project -->
-            <div class="project-box reveal">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="KaamFinder Project">
-                    <div class="project-layer">
-                        <h4>KaamFinder</h4>
-                        <p>A Full-Stack platform connecting skilled workers with local job opportunities in India. Built with React, Node.js, and MongoDB.</p>
-                        <a href="https://kaamfinder-india-frontend-mu.vercel.app" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
+        <div class="projects-grid">
+            <!-- PROJECT 1: Bittu AI (Featured) -->
+            <div class="project-card featured-project">
+                <div class="featured-ribbon"><i class='bx bxs-star'></i> Featured Production App</div>
+                
+                <div class="project-header">
+                    <div class="project-icon-title">
+                        <div class="app-icon bittu-icon"><i class='bx bx-bot'></i></div>
+                        <div>
+                            <div class="project-meta-top">
+                                <h3>Bittu AI</h3>
+                                <span class="project-type">One-Click AI Tools Suite</span>
+                            </div>
+                            <span class="project-domain"><i class='bx bx-globe'></i> bittuai.online</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://bittuai.online" target="_blank" class="live-btn" title="Visit Live Site">
+                            <i class='bx bx-link-external'></i> Live App
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tech-stack-row">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>React.js</span>
+                    <span>Tailwind CSS</span>
+                    <span>Google Gemini API</span>
+                    <span>Edge-TTS</span>
+                    <span>Vercel</span>
+                    <span>Render</span>
+                </div>
+
+                <div class="project-description">
+                    <ul class="project-bullets">
+                        <li>
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Full-Stack Production AI Platform:</strong> Built & deployed an AI media platform with <strong>7+ integrated tools</strong> serving real users. Leveraged advanced Prompt Engineering with Google Gemini API to generate scripts, dialogues, and DSA solutions end-to-end — including a Text-to-Video engine and a Multi-Character AI Dialogue Studio with Edge-TTS neural voices.</span>
+                        </li>
+                        <li>
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Spectral Analysis & WASM Execution:</strong> Engineered an Audio/Video Fingerprint Analyzer using <strong>FFT spectral analysis, perceptual hashing, and K-Means clustering</strong>, plus an in-browser DSA Platform (<strong>1,800+ problems</strong>) with Monaco Editor and Pyodide WASM execution.</span>
+                        </li>
+                        <li>
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Monetization & SEO:</strong> Integrated a live <strong>Razorpay payment gateway (₹99 Pro Pass)</strong> with HMAC-SHA256 verification, and deployed on Vercel + Render with custom domain and SEO/Search Console setup.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-footer">
+                    <div class="project-highlights">
+                        <span class="highlight-chip"><i class='bx bx-check-double'></i> 7+ AI Tools</span>
+                        <span class="highlight-chip"><i class='bx bx-code-curly'></i> 1,800+ DSA Engine</span>
+                        <span class="highlight-chip"><i class='bx bx-credit-card-alt'></i> Razorpay Secured</span>
+                    </div>
+                    <a href="https://bittuai.online" target="_blank" class="card-link">Explore bittuai.online <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+
+            <!-- PROJECT 2: Maa Durga Jan Seva Kendra -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon-title">
+                        <div class="app-icon kendra-icon"><i class='bx bx-building-house'></i></div>
+                        <div>
+                            <div class="project-meta-top">
+                                <h3>Maa Durga Jan Seva Kendra</h3>
+                                <span class="project-type">Citizen Services Web Portal</span>
+                            </div>
+                            <span class="project-tag-status">Active Client Project</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Praveen-3517" target="_blank" class="github-btn" title="View on GitHub">
+                            <i class='bx bxl-github'></i> Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tech-stack-row">
+                    <span>Next.js</span>
+                    <span>React.js</span>
+                    <span>JavaScript</span>
+                    <span>CSS3</span>
+                    <span>Socket.io</span>
+                    <span>Meta WhatsApp Cloud API</span>
+                </div>
+
+                <div class="project-description">
+                    <ul class="project-bullets">
+                        <li>
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Citizen Document Portal:</strong> Built a streamlined citizen document portal for users to check required documentation (PAN Card, Income & Caste Certificate, Ayushman Card, Voter ID) and upload files directly for government service processing.</span>
+                        </li>
+                        <li>
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Admin Dashboard & Workflow:</strong> Developed an administrative dashboard for the center owner to track submissions, update live service status (<em>Pending &rarr; In Progress &rarr; Completed</em>), attach official remarks, and download documents.</span>
+                        </li>
+                        <li>
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Real-Time WhatsApp Automation:</strong> Engineered a real-time WhatsApp bot using <strong>Socket.io</strong> for bi-directional communication, automating replies and service menus instantly with an in-app simulator for testing prior to Meta WhatsApp Cloud API deployment.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-footer">
+                    <div class="project-highlights">
+                        <span class="highlight-chip"><i class='bx bxl-whatsapp'></i> WhatsApp Bot</span>
+                        <span class="highlight-chip"><i class='bx bx-broadcast'></i> Socket.io Realtime</span>
+                        <span class="highlight-chip"><i class='bx bx-file'></i> Gov Docs Processing</span>
+                    </div>
+                    <a href="https://github.com/Praveen-3517" target="_blank" class="card-link">View Repository <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+
+            <!-- PROJECT 3: EduManage -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon-title">
+                        <div class="app-icon edu-icon"><i class='bx bx-graduation'></i></div>
+                        <div>
+                            <div class="project-meta-top">
+                                <h3>EduManage</h3>
+                                <span class="project-type">School Management System</span>
+                            </div>
+                            <span class="project-tag-status">Full-Stack ERP</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Praveen-3517" target="_blank" class="github-btn" title="View on GitHub">
+                            <i class='bx bxl-github'></i> Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tech-stack-row">
+                    <span>Next.js 16 (App Router)</span>
+                    <span>TypeScript</span>
+                    <span>SQLite</span>
+                    <span>Prisma ORM</span>
+                    <span>Tailwind CSS</span>
+                    <span>shadcn/ui</span>
+                    <span>Zod</span>
+                    <span>JWT RBAC</span>
+                    <span>Vercel</span>
+                </div>
+
+                <div class="project-description">
+                    <ul class="project-bullets">
+                        <li>
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Triple-Portal RBAC Security:</strong> Implemented robust Role-Based Access Control with 3 distinct, secure portals (<strong>Admin, Teacher, Student</strong>) leveraging Next.js Edge Middleware route protection and JWT authentication.</span>
+                        </li>
+                        <li>
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Complete School Admin ERP:</strong> Built an admin portal for total institutional lifecycle management — student & teacher onboarding, academic sessions, class/section/subject mappings, exam scheduling, and comprehensive audit logs.</span>
+                        </li>
+                        <li>
+                            <i class='bx bx-check-circle'></i>
+                            <span><strong>Dedicated Teacher & Student Dashboards:</strong> Designed responsive portals covering real-time attendance tracking, exam timetables, subject-wise marks/grade calculations, and individualized student performance remarks.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-footer">
+                    <div class="project-highlights">
+                        <span class="highlight-chip"><i class='bx bx-shield-alt-2'></i> 3-Tier RBAC</span>
+                        <span class="highlight-chip"><i class='bx bx-server'></i> Prisma + SQLite</span>
+                        <span class="highlight-chip"><i class='bx bx-check-shield'></i> Zod Validation</span>
+                    </div>
+                    <a href="https://github.com/Praveen-3517" target="_blank" class="card-link">View Repository <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section class="education" id="education">
+        <div class="section-title">
+            <span class="subtitle">Academic Journey & Credentials</span>
+            <h2 class="heading">Education & <span>Certifications</span></h2>
+        </div>
+
+        <div class="edu-cert-container">
+            <!-- Education Timeline -->
+            <div class="timeline-column">
+                <h3 class="column-title"><i class='bx bxs-graduation'></i> Education</h3>
+                <div class="timeline">
+                    <!-- MCA -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-badge pursuing">Pursuing</span>
+                            <span class="timeline-date">Master's Degree</span>
+                            <h4>Master of Computer Applications (MCA)</h4>
+                            <p class="institute">GL Bajaj Institute of Technology & Management</p>
+                            <p class="location"><i class='bx bx-map-pin'></i> Greater Noida (UP)</p>
+                            <div class="card-details">
+                                Advanced coursework in algorithms, full-stack systems engineering, database architecture, and machine learning application integration.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BCA -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <span class="timeline-badge completed">CGPA: 70%</span>
+                            <span class="timeline-date">Bachelor's Degree</span>
+                            <h4>Bachelor of Computer Applications (BCA)</h4>
+                            <p class="institute">Technical Education And Research Institute PG College</p>
+                            <p class="location"><i class='bx bx-map-pin'></i> Ghazipur (UP)</p>
+                            <div class="card-details">
+                                Graduated with 70% aggregate. Core focus on Object-Oriented Programming (C, C++, Java), Data Structures, Database Systems, and Web Technologies.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bittuframe AI Project -->
-            <div class="project-box reveal">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="Bittuframe AI">
-                    <div class="project-layer">
-                        <h4>Bittuframe AI</h4>
-                        <p>An innovative AI-powered Text to Video Generator allowing users to create stunning visuals through text prompts.</p>
-                        <a href="https://github.com/Praveen-3517/bittuframe-ai" target="_blank"><i class='bx bxl-github'></i> View Code</a>
+            <!-- Certifications & Learning Column -->
+            <div class="timeline-column">
+                <h3 class="column-title"><i class='bx bx-award'></i> Certifications & Programs</h3>
+                <div class="timeline">
+                    <!-- PW Skills Certification -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot cert-dot"></div>
+                        <div class="timeline-card cert-card">
+                            <span class="timeline-badge ongoing">Ongoing</span>
+                            <span class="timeline-date">Professional Program</span>
+                            <h4>Data Analytics Professional Program</h4>
+                            <p class="institute">Physics Wallah (PW Skills)</p>
+                            <p class="location"><i class='bx bx-badge-check'></i> Industry Professional Certification</p>
+                            <div class="card-details">
+                                Comprehensive training covering Data Analysis pipelines, Python for Data Science (Pandas, NumPy, Matplotlib, Seaborn), SQL querying, Statistical Analysis, and Business Intelligence dashboards.
+                            </div>
+                            <div class="cert-skills-pills">
+                                <span>Data Analytics</span>
+                                <span>Python</span>
+                                <span>SQL</span>
+                                <span>Statistical Analysis</span>
+                                <span>MS Excel</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <!-- FrameForge AI Project -->
-            <div class="project-box reveal">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&w=800&q=80" alt="FrameForge AI">
-                    <div class="project-layer">
-                        <h4>FrameForge AI</h4>
-                        <p>A next-generation AI media generation platform with a live interactive web application interface.</p>
-                        <a href="https://frameforge-ai-phi.vercel.app" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Live Location Tracker Project -->
-            <div class="project-box reveal">
-                <div class="project-img">
-                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" alt="Live Location Tracker">
-                    <div class="project-layer">
-                        <h4>Live Location Tracker</h4>
-                        <p>A real-time GPS tracking system with a hacker-style dashboard, live camera capture, and reverse geocoding built using Node.js and Socket.io.</p>
-                        <a href="https://live-location-tracker-u391.onrender.com/login" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
+
+                    <!-- Key Technical Mastery Card -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot cert-dot"></div>
+                        <div class="timeline-card cert-card">
+                            <span class="timeline-badge completed">Specialization</span>
+                            <span class="timeline-date">Applied AI Engineering</span>
+                            <h4>LLM Integration & Prompt Engineering</h4>
+                            <p class="institute">Self-Directed & Hands-on Production Projects</p>
+                            <p class="location"><i class='bx bx-code-alt'></i> Production Deployed</p>
+                            <div class="card-details">
+                                Hands-on expertise in zero-shot/few-shot prompting, structured JSON schema outputs from Gemini API, multi-character dialogue generation, and WASM in-browser code execution.
+                            </div>
+                            <div class="cert-skills-pills">
+                                <span>Google Gemini API</span>
+                                <span>Prompt Engineering</span>
+                                <span>Pyodide WASM</span>
+                                <span>FastAPI</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,33 +600,101 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
+        <div class="section-title">
+            <span class="subtitle">Get In Touch</span>
+            <h2 class="heading">Contact <span>Me</span></h2>
+        </div>
         
-        <form action="#" class="reveal">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+        <div class="contact-container">
+            <div class="contact-info-panel">
+                <h3>Let's collaborate on your next project</h3>
+                <p>Feel free to reach out for software engineering roles, full-stack development projects, AI product integrations, or data analytics collaborations.</p>
+
+                <div class="contact-methods">
+                    <a href="mailto:praveenmaurya3517@gmail.com" class="contact-item">
+                        <div class="contact-icon"><i class='bx bx-envelope'></i></div>
+                        <div>
+                            <span>Email</span>
+                            <h4>praveenmaurya3517@gmail.com</h4>
+                        </div>
+                    </a>
+
+                    <a href="tel:+916386703517" class="contact-item">
+                        <div class="contact-icon"><i class='bx bx-phone-call'></i></div>
+                        <div>
+                            <span>Phone</span>
+                            <h4>(+91) 6386703517</h4>
+                        </div>
+                    </a>
+
+                    <a href="https://linkedin.com/in/praveen-kushwaha" target="_blank" class="contact-item">
+                        <div class="contact-icon"><i class='bx bxl-linkedin'></i></div>
+                        <div>
+                            <span>LinkedIn</span>
+                            <h4>linkedin.com/in/praveen-kushwaha</h4>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Praveen-3517" target="_blank" class="contact-item">
+                        <div class="contact-icon"><i class='bx bxl-github'></i></div>
+                        <div>
+                            <span>GitHub</span>
+                            <h4>github.com/Praveen-3517</h4>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for reaching out! Your message has been prepared.');">
+                <h3>Send a Message</h3>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="e.g. John Doe" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Your Email</label>
+                        <input type="email" placeholder="e.g. john@example.com" required>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="e.g. +91 9876543210">
+                    </div>
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Project Opportunity / Job Inquiry" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Your Message</label>
+                    <textarea rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">
+                    <i class='bx bx-send'></i> Send Message
+                </button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2026 by Praveen Kushwaha | All Rights Reserved.</p>
+        <div class="footer-content">
+            <a href="#home" class="footer-logo">Praveen<span>.dev</span></a>
+            <p>Designed & Engineered by Praveen Kushwaha &copy; 2026. All Rights Reserved.</p>
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/praveen-kushwaha" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Praveen-3517" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="mailto:praveenmaurya3517@gmail.com"><i class='bx bx-envelope'></i></a>
+            </div>
         </div>
         <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+            <a href="#home" title="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
 
-    <!-- Scroll Reveal Library -->
+    <!-- Scroll Reveal Library & Script -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
 </body>
